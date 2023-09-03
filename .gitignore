@@ -1,0 +1,12 @@
+target
+.classpath
+.project
+.settings
+.idea
+*.iml
+*.bat
+*.versionsBackup
+*.log
+.DS_Store
+Brewfile.lock.json
+.java-version

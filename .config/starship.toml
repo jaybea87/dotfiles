@@ -1,0 +1,12 @@
+format="$directory$all$character"
+
+[java]
+format = 'via [${symbol}(${version} )](cyan)'
+
+[kubernetes]
+format = 'on [⛵ $context \($namespace\)](cyan) '
+disabled = false
+
+[kubernetes.context_aliases]
+".*api-os-test-tomra-com:6443.*" = "test"
+".*api-os-prod-tomra-com:6443.*" = "production"
