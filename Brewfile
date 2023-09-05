@@ -19,6 +19,7 @@ cask 'google-chrome'
 cask 'iterm2'
 cask 'visual-studio-code'
 cask 'jetbrains-toolbox'
+cask 'docker'
 
 # Temurin Java
 cask 'temurin'
