@@ -41,3 +41,6 @@ java17
 # Jenv
 set PATH $HOME/.jenv/bin $PATH
 status --is-interactive; and jenv init - | source
+
+# Add gcloud components to PATH
+source "$(brew --prefix)/share/google-cloud-sdk/path.fish.inc"

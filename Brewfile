@@ -28,6 +28,7 @@ cask 'jetbrains-toolbox'
 cask 'docker'
 cask 'spotify'
 cask 'google-cloud-sdk'
+cask 'alfred'
 
 # Temurin Java
 cask 'temurin'
