@@ -1,6 +1,9 @@
 # Aliases
 alias e='exa --icons --git -laTL 1'
 
+# Google Cloud
+alias glogin="gcloud auth login && gcloud auth application-default login"
+
 # Maven
 alias mvnp="mvn clean install -Dpackaging=true"
 
