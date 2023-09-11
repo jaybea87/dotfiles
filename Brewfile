@@ -29,6 +29,7 @@ cask 'docker'
 cask 'spotify'
 cask 'google-cloud-sdk'
 cask 'alfred'
+cask 'logi-options-plus'
 
 # Temurin Java
 cask 'temurin'
