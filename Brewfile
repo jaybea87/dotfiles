@@ -18,6 +18,7 @@ brew 'awscli'
 brew 'terraform'
 brew 'kubernetes-cli'
 brew 'jq'
+brew 'imagemagick' # Used by TOMRA service-portal
 
 # Casks
 cask 'slack'
@@ -30,6 +31,8 @@ cask 'spotify'
 cask 'google-cloud-sdk'
 cask 'alfred'
 cask 'logi-options-plus'
+cask 'postman'
+cask 'authy'
 
 # Temurin Java
 cask 'temurin'
