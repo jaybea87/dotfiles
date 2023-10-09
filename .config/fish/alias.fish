@@ -11,6 +11,7 @@ alias glogin="gcloud auth login jannik.berg@tomra.com --no-browser && gcloud aut
 # Maven
 alias mvnp="mvn clean install -Dpackaging=true"
 alias mvndc="mvn dependency-check:aggregate -U -DcveValidForHours=24 --fail-at-end"
+alias mvntomrasources="mvn dependency:sources -DincludeGroupIds=com.tomra"
 
 # Git
 alias gcm="git checkout main"
