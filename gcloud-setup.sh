@@ -9,7 +9,6 @@ gcloud auth application-default login
 # https://cloud.google.com/blog/products/containers-kubernetes/kubectl-auth-changes-in-gke
 gcloud components install gke-gcloud-auth-plugin
 
-
 # The command line with parameters can be accessed from the cluster list page:
 # https://console.cloud.google.com/kubernetes/list/overview?referrer=search&project=eu-lab-mx006-dt643 when you click on "Connect" action
 gcloud container clusters get-credentials gke-autopilot-cluster-eu-lab --region europe-west1 --project eu-lab-mx006-dt643
