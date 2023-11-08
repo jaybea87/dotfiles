@@ -4,6 +4,8 @@ alias e='exa --icons --git -laTL 1'
 # Google Cloud
 alias glogin="gcloud auth login jannik.berg@tomra.com --no-browser && gcloud auth application-default login"
 
+alias gsql-list="gcloud sql instances list"
+
 # Gitlab runner issue (https://gitlab.com/gitlab-org/gitlab-runner/-/issues/3376)
 #alias gitlabget = "gcloud container clusters get-credentials gitlab-terraform-gke --region=europe-west1 --project=gitlab-runner-df52"
 #alias gitlabkill = "kubectl get pods | grep "^runner-" | grep -e "\s\d*h" | cut -d ' ' -f1 | while read podname; do echo "KILLING $podname"; kubectl delete pod $podname; done"
@@ -28,4 +30,3 @@ alias tfmove="terraform state mv $1 $2"
 # Java
 alias java11='export JAVA_HOME=$JAVA_11_HOME'
 alias java17='export JAVA_HOME=$JAVA_17_HOME'
-
