@@ -3,8 +3,14 @@ alias e='exa --icons --git -laTL 1'
 
 # Google Cloud
 alias glogin="gcloud auth login jannik.berg@tomra.com --no-browser && gcloud auth application-default login"
-
+alias gproject-list="gcloud projects list"
+alias gproject-set="gcloud config set project $1"
+alias gcompute-list="gcloud compute instances list"
 alias gsql-list="gcloud sql instances list"
+
+# Kubectl
+alias kcontext="kubectl config get-contexts"
+alias kcontext-set="kubectl config use-context $1"
 
 # Gitlab runner issue (https://gitlab.com/gitlab-org/gitlab-runner/-/issues/3376)
 #alias gitlabget = "gcloud container clusters get-credentials gitlab-terraform-gke --region=europe-west1 --project=gitlab-runner-df52"
