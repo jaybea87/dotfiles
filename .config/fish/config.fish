@@ -8,6 +8,9 @@ source ~/.config/fish/alias.fish
 # Fish export
 source ~/.config/fish/export.fish
 
+# Fish local
+source ~/.config/fish/local.fish
+
 # Path
 set PATH /opt/homebrew/bin /opt/homebrew/sbin $PATH
 set PATH /usr/local/bin /usr/bin /bin /usr/sbin /sbin /usr/local/bin /usr/bin /bin /usr/sbin /sbin $PATH

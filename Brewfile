@@ -19,6 +19,7 @@ brew 'terraform'
 brew 'kubernetes-cli'
 brew 'jq'
 brew 'imagemagick' # Used by TOMRA service-portal
+brew 'cloud-sql-proxy'
 
 # Casks
 cask 'slack'
@@ -33,6 +34,8 @@ cask 'alfred'
 cask 'logi-options-plus'
 cask 'postman'
 cask 'authy'
+cask 'microsoft-remote-desktop'
+cask 'obsidian'
 
 # Temurin Java
 cask 'temurin'

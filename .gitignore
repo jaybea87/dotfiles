@@ -10,3 +10,4 @@ target
 .DS_Store
 Brewfile.lock.json
 .java-version
+*local.fish

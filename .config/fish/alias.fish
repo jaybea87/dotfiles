@@ -3,6 +3,14 @@ alias e='exa --icons --git -laTL 1'
 
 # Google Cloud
 alias glogin="gcloud auth login jannik.berg@tomra.com --no-browser && gcloud auth application-default login"
+alias gproject-list="gcloud projects list"
+alias gproject-set="gcloud config set project $1"
+alias gcompute-list="gcloud compute instances list"
+alias gsql-list="gcloud sql instances list"
+
+# Kubectl
+alias kcontext="kubectl config get-contexts"
+alias kcontext-set="kubectl config use-context $1"
 
 # Gitlab runner issue (https://gitlab.com/gitlab-org/gitlab-runner/-/issues/3376)
 #alias gitlabget = "gcloud container clusters get-credentials gitlab-terraform-gke --region=europe-west1 --project=gitlab-runner-df52"
@@ -11,6 +19,7 @@ alias glogin="gcloud auth login jannik.berg@tomra.com --no-browser && gcloud aut
 # Maven
 alias mvnp="mvn clean install -Dpackaging=true"
 alias mvndc="mvn dependency-check:aggregate -U -DcveValidForHours=24 --fail-at-end"
+alias mvntomrasources="mvn dependency:sources -DincludeGroupIds=com.tomra"
 
 # Git
 alias gcm="git checkout main"
@@ -27,4 +36,3 @@ alias tfmove="terraform state mv $1 $2"
 # Java
 alias java11='export JAVA_HOME=$JAVA_11_HOME'
 alias java17='export JAVA_HOME=$JAVA_17_HOME'
-
