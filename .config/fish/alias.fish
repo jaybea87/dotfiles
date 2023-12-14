@@ -32,6 +32,7 @@ alias tfp="terraform plan"
 alias tfa="terraform apply"
 alias tflock="terraform providers lock -platform=windows_amd64 -platform=darwin_amd64 -platform=linux_amd64 -platform=darwin_arm64"
 alias tfmove="terraform state mv $1 $2"
+alias tfrm="terraform state rm $1"
 
 # Java
 alias java11='export JAVA_HOME=$JAVA_11_HOME'
