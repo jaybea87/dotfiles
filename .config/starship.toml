@@ -1,4 +1,4 @@
-format="$directory$all$character"
+format = "$directory$all$character"
 
 [java]
 format = 'via [${symbol}(${version} )](cyan)'
@@ -7,8 +7,10 @@ format = 'via [${symbol}(${version} )](cyan)'
 format = 'on [⛵ $context \($namespace\)](cyan) '
 disabled = false
 
-[kubernetes.context_aliases]
+[[kubernetes.contexts]]
+# Using capture groups
 # Contexts from GKE, AWS and other cloud providers usually carry additional information, like the region/zone.
 # The following entry matches on the GKE format (`gke_projectname_zone_cluster-name`)
 # and renames every matching kube context into a more readable format (`gke-cluster-name`):
-'gke_.*_(?P<var_cluster>[\w-]+)' = '$var_cluster'
+context_pattern = "gke_.*_(?P<cluster>[\\w-]+)"
+context_alias = "$cluster"
