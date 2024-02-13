@@ -37,3 +37,6 @@ alias tfrm="terraform state rm $1"
 # Java
 alias java11='export JAVA_HOME=$JAVA_11_HOME'
 alias java17='export JAVA_HOME=$JAVA_17_HOME'
+
+# Docker
+alias docker-run="docker run -i -t $1 /bin/bash"
