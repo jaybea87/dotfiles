@@ -20,6 +20,7 @@ alias kcontext-set="kubectl config use-context $1"
 alias mvnp="mvn clean install -Dpackaging=true"
 alias mvndc="mvn dependency-check:aggregate -U -DcveValidForHours=24 --fail-at-end"
 alias mvntomrasources="mvn dependency:sources -DincludeGroupIds=com.tomra"
+alias mvnlatest="mvn versions:use-latest-versions -Dincludes=com.tomra\*\:\* && mvn versions:update-parent && mvn versions:commit"
 
 # Git
 alias gcm="git checkout main"
