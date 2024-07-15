@@ -1,7 +1,3 @@
-# Fish functions
-source ~/.config/fish/functions/git-backup-branch.fish
-source ~/.config/fish/functions/git-rebase-force.fish
-
 # Fish alias
 source ~/.config/fish/alias.fish
 

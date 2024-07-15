@@ -19,8 +19,6 @@ init_symlinks () {
         ln -svf "$PWD/.config/fish/export.fish" "$HOME/.config/fish/export.fish"
         ln -svf "$PWD/.config/fish/jenv.fish" "$HOME/.config/fish/jenv.fish"
         ln -svf "$PWD/.config/starship.toml" "$HOME/.config/starship.toml"
-        ln -svf "$PWD/.config/fish/functions/git-backup-branch.fish" "$HOME/.config/fish/functions/git-backup-branch.fish"
-        ln -svf "$PWD/.config/fish/functions/git-rebase-force.fish" "$HOME/.config/fish/functions/git-rebase-force.fish"
         echo "Symlinking complete"
     else
         echo "Symlinking cancelled"
