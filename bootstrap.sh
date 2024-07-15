@@ -64,20 +64,20 @@ install_tools() {
     fi
 }
 
-install_aws_mfa() {
-    if [ $( echo "$OSTYPE" | grep 'darwin' ) ] ; then
-        echo "${BLUE}Installing aws-mfa${NC}"
-        echo "Proceed? (y/n)"
-        read resp
-        if [ "$resp" = 'y' -o "$resp" = 'Y' ] ; then
-            sh aws-mfa-install.sh
-        else
-            echo "Aws-mfa installation cancelled by user"
-        fi
-    else
-        echo "Skipping installations using Homebrew because MacOS was not detected..."
-    fi
-}
+#install_aws_mfa() {
+#    if [ $( echo "$OSTYPE" | grep 'darwin' ) ] ; then
+#        echo "${BLUE}Installing aws-mfa${NC}"
+#        echo "Proceed? (y/n)"
+#        read resp
+#        if [ "$resp" = 'y' -o "$resp" = 'Y' ] ; then
+#            sh aws-mfa-install.sh
+#        else
+#            echo "Aws-mfa installation cancelled by user"
+#        fi
+#    else
+#        echo "Skipping installations using Homebrew because MacOS was not detected..."
+#    fi
+#}
 
 install_jenv() {
     if [ $( echo "$OSTYPE" | grep 'darwin' ) ] ; then
@@ -101,5 +101,5 @@ install_homebrew
 echo "Making sure brew command is available for this session"
 eval "$(/opt/homebrew/bin/brew shellenv)"
 install_tools
-install_aws_mfa
+#install_aws_mfa
 install_jenv
