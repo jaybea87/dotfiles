@@ -13,6 +13,9 @@ jenv add /Library/Java/JavaVirtualMachines/temurin-11.jdk/Contents/Home
 echo "Adding temurin 17 to jenv"
 jenv add /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home
 
+echo "Adding temurin 21 to jenv"
+jenv add /Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home
+
 # This could be made generic by having the user select from a list of "jenv versions"
 echo "Setting global java version to 17.0.8.1"
 jenv global 17.0.8.1

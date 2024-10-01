@@ -11,6 +11,7 @@ alias gsql-list="gcloud sql instances list"
 # Kubectl
 alias kcontext="kubectl config get-contexts"
 alias kcontext-set="kubectl config use-context $1"
+alias kuscluster="gcloud container clusters get-credentials gke-autopilot-cluster-us-prod --region us-central1 --project us-prod-mx006-dt644"
 
 # Gitlab runner issue (https://gitlab.com/gitlab-org/gitlab-runner/-/issues/3376)
 #alias gitlabget = "gcloud container clusters get-credentials gitlab-terraform-gke --region=europe-west1 --project=gitlab-runner-df52"

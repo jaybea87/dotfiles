@@ -33,13 +33,15 @@ cask 'docker'
 cask 'spotify'
 cask 'google-cloud-sdk'
 cask 'alfred'
-cask 'logi-options-plus'
 cask 'postman'
 cask 'authy'
 cask 'microsoft-remote-desktop'
+cask 'logitech-options'
 cask 'obsidian'
 
 # Temurin Java
 cask 'temurin'
-cask 'temurin17'
 cask 'temurin11'
+cask 'temurin17'
+cask 'temurin21'
+
