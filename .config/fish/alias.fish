@@ -15,6 +15,7 @@ alias kcs-eu="kubectl config use-context gke_eu-prod-mx006-dt644_europe-west1_gk
 alias kcs-us="kubectl config use-context gke_us-prod-mx006-dt644_us-central1_gke-autopilot-cluster-us-prod"
 alias kcs-au="kubectl config use-context gke_au-prod-mx006-dt644_australia-southeast1_gke-autopilot-cluster-au-prod"
 alias kcs-eu-test="kubectl config use-context gke_eu-test-mx006-dt644_europe-west1_gke-autopilot-cluster-eu-test"
+alias kcs-eu-lab="kubectl config use-context gke_eu-lab-mx006-dt643_europe-west1_gke-autopilot-cluster-eu-lab"
 alias kgp="kubectl get pods"
 alias kgp-yaml="kubectl get pod $1 -o yaml"
 alias kdp="kubectl describe pods $1"
