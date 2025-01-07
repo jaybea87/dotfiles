@@ -33,10 +33,10 @@ cask 'spotify'
 cask 'google-cloud-sdk'
 cask 'alfred'
 cask 'postman'
-cask 'authy'
 cask 'microsoft-remote-desktop'
 cask 'logitech-options'
 cask 'obsidian'
+cask 'displaylink'
 
 # Temurin Java
 cask 'temurin'
