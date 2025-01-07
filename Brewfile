@@ -14,7 +14,6 @@ brew 'starship'
 brew 'kotlin'
 brew 'postgresql@15'
 brew 'python3'
-brew 'awscli'
 brew 'terraform'
 brew 'kubernetes-cli'
 brew 'jq'
@@ -41,7 +40,6 @@ cask 'obsidian'
 
 # Temurin Java
 cask 'temurin'
-cask 'temurin11'
-cask 'temurin17'
-cask 'temurin21'
+cask 'temurin@17'
+cask 'temurin@21'
 
