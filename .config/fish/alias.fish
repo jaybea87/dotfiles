@@ -22,6 +22,7 @@ alias kdp="kubectl describe pods $1"
 alias kgs="kubectl get secrets"
 alias klogs="kubectl logs -f $1"
 alias kshell="kubectl exec $1 -it --/bin/sh"
+alias kedit-deploy="kubectl edit deploy $1"
 
 # Gitlab runner issue (https://gitlab.com/gitlab-org/gitlab-runner/-/issues/3376)
 #alias gitlabget = "gcloud container clusters get-credentials gitlab-terraform-gke --region=europe-west1 --project=gitlab-runner-df52"
