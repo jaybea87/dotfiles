@@ -21,6 +21,7 @@ brew 'imagemagick' # Used by TOMRA service-portal
 brew 'cloud-sql-proxy'
 brew 'rsync' # get the latest version
 brew 'jmeter'
+brew 'opentofu'
 
 # Casks
 cask 'slack'
