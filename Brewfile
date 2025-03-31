@@ -2,6 +2,7 @@
 tap 'homebrew/cask'
 tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
+tap 'hashicorp/tap'
 
 # Div
 brew 'coreutils'
@@ -14,7 +15,6 @@ brew 'starship'
 brew 'kotlin'
 brew 'postgresql@15'
 brew 'python3'
-brew 'terraform'
 brew 'kubernetes-cli'
 brew 'jq'
 brew 'imagemagick' # Used by TOMRA service-portal
@@ -22,6 +22,7 @@ brew 'cloud-sql-proxy'
 brew 'rsync' # get the latest version
 brew 'jmeter'
 brew 'opentofu'
+brew 'hashicorp/tap/terraform'
 
 # Casks
 cask 'slack'
@@ -38,6 +39,7 @@ cask 'microsoft-remote-desktop'
 cask 'logitech-options'
 cask 'obsidian'
 cask 'displaylink'
+cask 'cyberduck'
 
 # Temurin Java
 cask 'temurin'
