@@ -8,22 +8,6 @@ alias gproject-set="gcloud config set project $1"
 alias gcompute-list="gcloud compute instances list"
 alias gsql-list="gcloud sql instances list"
 
-# Kubectl
-alias k="kubectl"
-alias kc="kubectl config get-contexts"
-alias kcs-eu="kubectl config use-context gke_eu-prod-mx006-dt644_europe-west1_gke-autopilot-cluster-eu-prod"
-alias kcs-us="kubectl config use-context gke_us-prod-mx006-dt644_us-central1_gke-autopilot-cluster-us-prod"
-alias kcs-au="kubectl config use-context gke_au-prod-mx006-dt644_australia-southeast1_gke-autopilot-cluster-au-prod"
-alias kcs-eu-test="kubectl config use-context gke_eu-test-mx006-dt644_europe-west1_gke-autopilot-cluster-eu-test"
-alias kcs-eu-lab="kubectl config use-context gke_eu-lab-mx006-dt643_europe-west1_gke-autopilot-cluster-eu-lab"
-alias kgp="kubectl get pods"
-alias kgp-yaml="kubectl get pod $1 -o yaml"
-alias kdp="kubectl describe pods $1"
-alias kgs="kubectl get secrets"
-alias klogs="kubectl logs -f $1"
-alias kshell="kubectl exec $1 -it --/bin/sh"
-alias kedit-deploy="kubectl edit deploy $1"
-
 # Gitlab runner issue (https://gitlab.com/gitlab-org/gitlab-runner/-/issues/3376)
 #alias gitlabget = "gcloud container clusters get-credentials gitlab-terraform-gke --region=europe-west1 --project=gitlab-runner-df52"
 #alias gitlabkill = "kubectl get pods | grep "^runner-" | grep -e "\s\d*h" | cut -d ' ' -f1 | while read podname; do echo "KILLING $podname"; kubectl delete pod $podname; done"

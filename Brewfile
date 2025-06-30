@@ -23,6 +23,7 @@ brew 'rsync' # get the latest version
 brew 'jmeter'
 brew 'opentofu'
 brew 'hashicorp/tap/terraform'
+brew 'openssl@3' # Need for DSMD root CA generation with easyrsa.
 
 # Casks
 cask 'slack'
