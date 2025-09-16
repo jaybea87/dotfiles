@@ -7,6 +7,7 @@ brew 'git'
 brew 'rsync' # get the latest version
 brew 'jq'
 brew 'openssl@3' # Need for DSMD root CA generation with easyrsa
+brew 'gnupg'
 
 # Development tools
 brew 'maven'
@@ -50,6 +51,9 @@ cask 'slack'
 # Casks - Productivity
 cask 'alfred'
 cask 'obsidian'
+
+# Jasper reports dependencies
+cask 'font-dejavu' # Used by TOMRA tp-reporting
 
 # Casks - Media
 cask 'spotify'

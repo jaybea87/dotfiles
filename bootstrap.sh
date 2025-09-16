@@ -36,6 +36,7 @@ init_symlinks() {
     log "Creating configuration directories..."
     mkdir -pv "${HOME}/.config"
     mkdir -pv "${HOME}/.config/fish"
+    mkdir -pv "${HOME}/.config/fish/functions"
 
     local files=(
         ".config/fish/config.fish"
@@ -46,6 +47,7 @@ init_symlinks() {
         ".config/starship.toml"
     )
 
+    # Symlink regular config files
     log "Creating symlinks..."
     for file in "${files[@]}"; do
         local source="$PWD/$file"
@@ -63,6 +65,23 @@ init_symlinks() {
             return 1
         fi
     done
+
+    # Symlink fish functions
+    if [[ -d ".config/fish/functions" ]]; then
+        log "Symlinking fish functions..."
+        for func_file in .config/fish/functions/*.fish; do
+            if [[ -f "$func_file" ]]; then
+                local source="$PWD/$func_file"
+                local target="$HOME/$func_file"
+                if ln -svf "$source" "$target"; then
+                    log "Successfully linked $(basename "$func_file")"
+                else
+                    log_error "Failed to link $(basename "$func_file")"
+                    return 1
+                fi
+            fi
+        done
+    fi
 
     log "Symlinking complete"
 }
