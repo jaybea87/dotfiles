@@ -38,9 +38,6 @@ set -g fish_color_valid_path --underline
 # My Starship
 starship init fish | source
 
-# Java 17
-java17
-
 # Jenv
 set PATH $HOME/.jenv/bin $PATH
 status --is-interactive; and jenv init - | source

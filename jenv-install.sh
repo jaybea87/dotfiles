@@ -56,6 +56,7 @@ configure_jenv() {
         "/Library/Java/JavaVirtualMachines/temurin-11.jdk/Contents/Home"
         "/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home"
         "/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home"
+        "/Library/Java/JavaVirtualMachines/temurin-25.jdk/Contents/Home"
     )
 
     log "Adding JDKs to jenv..."
