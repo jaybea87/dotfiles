@@ -44,3 +44,7 @@ status --is-interactive; and jenv init - | source
 
 # Add gcloud components to PATH
 source "$(brew --prefix)/share/google-cloud-sdk/path.fish.inc"
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+set --export --prepend PATH "/Users/jberg/.rd/bin"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)

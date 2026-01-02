@@ -8,6 +8,7 @@ brew 'rsync' # get the latest version
 brew 'jq'
 brew 'openssl@3' # Need for DSMD root CA generation with easyrsa
 brew 'gnupg'
+brew 'telnet'
 
 # Development tools
 brew 'maven'
@@ -15,6 +16,7 @@ brew 'maven-completion'
 brew 'kotlin'
 brew 'python3'
 brew 'jmeter'
+brew 'cloc'
 
 # Shell and prompt
 brew 'fish'
@@ -39,9 +41,9 @@ cask 'google-chrome'
 cask 'iterm2'
 cask 'visual-studio-code'
 cask 'jetbrains-toolbox'
-cask 'docker'
+cask 'rancher'
 cask 'postman'
-cask 'google-cloud-sdk'
+cask 'gcloud-cli'
 cask 'microsoft-remote-desktop'
 cask 'cyberduck'
 
