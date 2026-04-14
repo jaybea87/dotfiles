@@ -11,3 +11,6 @@ target
 Brewfile.lock.json
 .java-version
 *local.fish
+
+# Company-specific scripts
+java-cert-import.sh

@@ -17,6 +17,7 @@ brew 'kotlin'
 brew 'python3'
 brew 'jmeter'
 brew 'cloc'
+brew 'opencode'
 
 # Shell and prompt
 brew 'fish'
@@ -61,7 +62,7 @@ cask 'font-dejavu' # Used by TOMRA tp-reporting
 cask 'spotify'
 
 # Casks - Hardware
-cask 'logitech-options'
+#cask 'logi-options+'
 cask 'displaylink'
 
 # Java versions
@@ -69,3 +70,4 @@ cask 'temurin'
 cask 'temurin@17'
 cask 'temurin@21'
 cask 'temurin@25'
+cask 'temurin'

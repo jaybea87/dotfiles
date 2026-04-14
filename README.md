@@ -43,16 +43,5 @@ necessary.
 - Modify Brewfile to change installed applications
 - Edit fish configuration files for shell customization
 - Update Java versions in jenv-install.sh as needed
-
-## Structure
-```
-├── bootstrap.sh          # Main setup script
-├── Brewfile              # Homebrew package definitions
-├── fish/                 # Fish shell configuration
-│   ├── config.fish       # Main fish config
-│   └── local.fish        # Local/private config (create yourself)
-├── starship/             # Starship prompt config
-├── jenv-install.sh       # Java environment setup
-└── lib.sh                # Shared utility functions
 ```
 

@@ -52,32 +52,60 @@ add_jdk() {
 }
 
 configure_jenv() {
-    local jdks=(
-        "/Library/Java/JavaVirtualMachines/temurin-11.jdk/Contents/Home"
-        "/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home"
-        "/Library/Java/JavaVirtualMachines/temurin-21.jdk/Contents/Home"
-        "/Library/Java/JavaVirtualMachines/temurin-25.jdk/Contents/Home"
-    )
+    log "Discovering installed JDKs..."
+
+    # Dynamically find all JDK installations in the standard macOS location
+    local jdks=()
+
+    if [[ -d "/Library/Java/JavaVirtualMachines" ]]; then
+        # Find all .jdk directories and get their Contents/Home paths
+        local jdk_path
+        for jdk_path in $(find /Library/Java/JavaVirtualMachines -maxdepth 1 -name "*.jdk" -type d | sort); do
+            if [[ -d "$jdk_path/Contents/Home" ]]; then
+                jdks+=("$jdk_path/Contents/Home")
+            fi
+        done
+    fi
+
+    if [[ ${#jdks[@]} -eq 0 ]]; then
+        log_warning "No JDK installations found in /Library/Java/JavaVirtualMachines"
+        return 1
+    fi
+
+    log_info "Found ${#jdks[@]} JDK installation(s)"
 
     log "Adding JDKs to jenv..."
     for jdk in "${jdks[@]}"; do
         add_jdk "$jdk"
     done
 
-    # Set global version - could be made configurable
-    local global_version="21"
-    log "Setting global Java version to $global_version"
-    if jenv global "$global_version" 2>/dev/null; then
-        log "Global Java version set to $global_version"
-    else
-        log_warning "Could not set global version to $global_version, using available version"
-        # Try to set any available version
-        local available_version
-        available_version=$(jenv versions --bare | head -n1)
-        if [[ -n "$available_version" ]]; then
-            jenv global "$available_version"
-            log "Set global Java version to $available_version"
+    # Set global version - prefer LTS versions in order: 26, 21, 17, 11, or latest available
+    local global_version=""
+    local preferred_versions=("26" "21" "17" "11")
+
+    log "Determining global Java version..."
+    for preferred in "${preferred_versions[@]}"; do
+        # Match either "26" exactly or "26.x.x" versions
+        if jenv versions --bare 2>/dev/null | grep -qE "^${preferred}(\.|\$)"; then
+            global_version="$preferred"
+            break
         fi
+    done
+
+    # If no preferred version found, use the latest available
+    if [[ -z "$global_version" ]]; then
+        global_version=$(jenv versions --bare 2>/dev/null | tail -n1)
+    fi
+
+    if [[ -n "$global_version" ]]; then
+        log "Setting global Java version to $global_version"
+        if jenv global "$global_version" 2>/dev/null; then
+            log "Global Java version set to $global_version"
+        else
+            log_warning "Could not set global version to $global_version"
+        fi
+    else
+        log_warning "Could not determine a global Java version"
     fi
 }
 

@@ -2,7 +2,7 @@
 alias e='exa --icons --git -laTL 1'
 
 # Google Cloud
-alias glogin="gcloud auth login jannik.berg@tomra.com --no-browser && gcloud auth application-default login"
+alias glogin="gcloud auth login --update-adc"
 alias gproject-list="gcloud projects list"
 alias gproject-set="gcloud config set project $1"
 alias gcompute-list="gcloud compute instances list"
@@ -35,3 +35,8 @@ alias docker-run="docker run -i -t $1 /bin/bash"
 
 # Fish to zsh
 alias unset="set --erase"
+
+# Npx & npm
+alias npxauth="npx google-artifactregistry-auth"
+alias npxbump="npx npm-check-updates --target minor -u && npm i"
+alias npxapi="npx openapi-typescript static/openapi.yaml -o src/api-types.ts"
