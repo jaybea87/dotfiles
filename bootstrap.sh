@@ -133,7 +133,9 @@ install_tools() {
     fi
 
     log "Installing tools using brew. This may take a while..."
-    if brew update && brew upgrade && brew bundle; then
+    brew update && brew upgrade || log_warning "brew upgrade encountered issues (non-fatal)"
+    brew trust hashicorp/tap 2>/dev/null || true
+    if brew bundle; then
         log "Tools installation completed successfully"
     else
         log_error "Tools installation failed"

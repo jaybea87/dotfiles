@@ -37,6 +37,6 @@ alias docker-run="docker run -i -t $1 /bin/bash"
 alias unset="set --erase"
 
 # Npx & npm
-alias npxauth="npx google-artifactregistry-auth"
+alias npxauth='set -l t (gcloud auth print-access-token); and pnpm config set "//europe-west1-npm.pkg.dev/artifacts-mx006-dt643/npm/:_authToken" "$t"'
 alias npxbump="npx npm-check-updates --target minor -u && npm i"
 alias npxapi="npx openapi-typescript static/openapi.yaml -o src/api-types.ts"

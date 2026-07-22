@@ -26,7 +26,6 @@ brew 'starship'
 # Cloud and infrastructure
 brew 'kubernetes-cli'
 brew 'cloud-sql-proxy'
-brew 'opentofu'
 brew 'hashicorp/tap/terraform'
 
 # Database
@@ -45,14 +44,13 @@ cask 'jetbrains-toolbox'
 cask 'rancher'
 cask 'postman'
 cask 'gcloud-cli'
-cask 'microsoft-remote-desktop'
 cask 'cyberduck'
 
 # Casks - Communication
 cask 'slack'
 
 # Casks - Productivity
-cask 'alfred'
+# cask 'alfred'
 cask 'obsidian'
 
 # Jasper reports dependencies
@@ -70,4 +68,3 @@ cask 'temurin'
 cask 'temurin@17'
 cask 'temurin@21'
 cask 'temurin@25'
-cask 'temurin'
