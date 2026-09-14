@@ -39,8 +39,11 @@ set -g fish_color_valid_path --underline
 starship init fish | source
 
 # Jenv
+# NOTE: `jenv init -` emits a `jenv rehash` line that runs on EVERY shell startup
+# and costs ~2s. Strip it here — shims are rehashed by jenv-install.sh
+# (finalize_setup) during the weekly bootstrap.sh run instead.
 set PATH $HOME/.jenv/bin $PATH
-status --is-interactive; and jenv init - | source
+status --is-interactive; and jenv init - | grep -v '^jenv rehash' | source
 
 # Add gcloud components to PATH
 source "$(brew --prefix)/share/google-cloud-sdk/path.fish.inc"
