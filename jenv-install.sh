@@ -79,9 +79,9 @@ configure_jenv() {
         add_jdk "$jdk"
     done
 
-    # Set global version - prefer LTS versions in order: 26, 21, 17, 11, or latest available
+    # Set global version - prefer LTS versions in order: 25, 21, 17, 11, or latest available
     local global_version=""
-    local preferred_versions=("26" "21" "17" "11")
+    local preferred_versions=("25" "21" "17" "11")
 
     log "Determining global Java version..."
     for preferred in "${preferred_versions[@]}"; do
