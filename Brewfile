@@ -17,7 +17,8 @@ brew 'kotlin'
 brew 'python3'
 brew 'jmeter'
 brew 'cloc'
-brew 'opencode'
+brew 'homebrew/core/opencode'
+brew 'node'
 
 # Shell and prompt
 brew 'fish'
